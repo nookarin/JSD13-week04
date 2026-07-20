@@ -6,7 +6,7 @@
 
 /* --- Profile block --- */
 /* Task 1: Select the profile block itself — add border, padding, max-width */
-_____ {
+.profile__avatar {
   border: 1px solid #ddd;
   padding: 24px;
   max-width: 300px;
@@ -14,20 +14,20 @@ _____ {
 }
 
 /* Task 2: Select the profile name element — make it bold, font-size 1.3rem */
-_____ {
+.profile__name {
   font-weight: bold;
   font-size: 1.3rem;
   margin: 12px 0 4px;
 }
 
 /* Task 3: Select the profile bio element — gray color, small font */
-_____ {
+.profile_bio {
   color: #666;
   font-size: 0.9rem;
 }
 
 /* Task 4: Select the profile FOLLOW modifier button — green background */
-_____ {
+.profile__btn {
   background: #2ea44f;
   color: white;
   border: none;
@@ -38,7 +38,7 @@ _____ {
 
 /* --- Alert block --- */
 /* Task 5: Select the alert--success modifier — green border, light green bg */
-_____ {
+.alert--success {
   border: 2px solid #2ea44f;
   background: #d4edda;
 }
