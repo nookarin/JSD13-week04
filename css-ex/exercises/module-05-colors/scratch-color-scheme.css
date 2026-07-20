@@ -19,11 +19,11 @@
    ============================================ */
 
    :root{
-      --primary: black;
-      --secondary: rgb(54, 0, 33);
+      --primary: rgb(206, 106, 169);
+      --secondary: rgb(206, 106, 169);
       --accent :pink;
-      --bg: rgb(29, 0, 23);
-      --text: rgb(255, 0, 255);
+      --bg: rgb(255, 143, 233);
+      --text: rgb(231, 79, 173);
    }
    
    body{
@@ -34,8 +34,11 @@
 
    .site-header{
       background: var(--primary);
-      padding: 16px, 16px;
+      padding: 24px, 24px;
       color: white;
+
+      border-radius: 5%;
+      margin: 30px;
    }
 
    .site-header a{
