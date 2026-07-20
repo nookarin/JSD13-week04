@@ -6,7 +6,7 @@
 
 /* Task 1 — Use a named color: "coral" for background, white text */
 .named {
-  background: _____;
+  background: coral;
   color: white;
   padding: 12px;
 }
@@ -14,15 +14,15 @@
 
 /* Task 2 — Use hex: background pure red, text white */
 .hex-code {
-  background: _____;
-  color: _____;
+  background: rgb(255, 0, 0);
+  color: white;
   padding: 12px;
 }
 
 
 /* Task 3 — Use rgb: background pure green (0-255), text white */
 .rgb-val {
-  background: _____;
+  background: rgb(0, 255, 0);
   color: white;
   padding: 12px;
 }
@@ -30,7 +30,7 @@
 
 /* Task 4 — Use rgba: background pure blue at 30% opacity, text white */
 .rgba-val {
-  background: _____;
+  background: rgba(0, 0, 255, 30%);
   color: white;
   padding: 12px;
 }
@@ -38,7 +38,7 @@
 
 /* Task 5 — Use hsl: background purple (hue ~270, saturation 80%, lightness 50%), text white */
 .hsl-val {
-  background: _____;
+  background: hsl(270, 80%, 50%);
   color: white;
   padding: 12px;
 }

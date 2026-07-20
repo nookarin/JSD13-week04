@@ -11,7 +11,7 @@
 */
 
 .hex-box {
-  background: 008080;
+  background: #008080;
   color: white;
   padding: 20px;
 }
@@ -24,7 +24,7 @@
 */
 
 .semi-box {
-  color: rgba(0, 0, 0, 2);
+  color: rgba(0, 0, 0, 50%);
   font-size: 1.2rem;
 }
 
@@ -37,6 +37,6 @@
 
 .bad-contrast {
   background: #f0f0f0;
-  color: #b0c4de;
+  color: #697585;
   padding: 20px;
 }
