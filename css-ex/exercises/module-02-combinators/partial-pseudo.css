@@ -1,0 +1,28 @@
+/* ============================================
+   PARTIAL — PSEUDO-CLASSES
+   Replace each _____ with the correct selector.
+   ============================================ */
+
+
+/* Task 1 — All <a> links should turn orange when hovered */
+a:hover {
+  color: orange;
+}
+
+
+/* Task 2 — The last <p> inside .list should have margin-bottom: 0 */
+.list p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Task 3 — Odd <tr> rows should have background: #f5f5f5 */
+tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+
+
+/* Task 4 — All <p> elements that are siblings of (follow) an <h2> should have margin-left: 20px */
+h2 ~ p {
+  margin-left: 20px;
+}

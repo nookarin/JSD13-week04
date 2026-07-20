@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debug — Breakpoints</title>
+  <link rel="stylesheet" href="exercise-breakpoints.css">
+</head>
+<body>
+
+  <section class="exercise">
+    <h2>Bug 1 — Wrong media query order</h2>
+    <p class="responsive-text">Resize the browser. Between 640-768px this should be orange. At 768px+ it should be green. Currently the smaller rule overrides the larger one. Fix the order.</p>
+  </section>
+
+  <hr>
+
+  <section class="exercise">
+    <h2>Bug 2 — Mobile text too small</h2>
+    <p class="mobile-text">On screens smaller than 480px, this text should be 1rem. On larger screens, it should be 1.25rem. The media query is missing. Add it.</p>
+  </section>
+
+  <hr>
+
+  <section class="exercise">
+    <h2>Bug 3 — Three-column layout doesn't stack</h2>
+    <div class="row">
+      <div class="col">Column 1</div>
+      <div class="col">Column 2</div>
+      <div class="col">Column 3</div>
+    </div>
+    <p>On screens narrower than 600px, these should stack vertically. Currently they never stack.</p>
+  </section>
+
+</body>
+</html>

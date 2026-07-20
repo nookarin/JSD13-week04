@@ -1,0 +1,11 @@
+/* ============================================
+   SCRATCH — RESPONSIVE CARD GRID
+   Write all CSS from scratch.
+   
+   TASKS:
+   1. .service-grid — display flex, flex-wrap wrap, gap 20px, justify-content center
+   2. .service-card — flex-basis 300px (or flex: 1 1 300px), border 1px solid #ddd, border-radius 8px, padding 24px, box-shadow subtle
+   3. .service-card h3 — font-size 1.2rem, margin-bottom 8px, color #2d3436
+   4. .service-card p — color #636e72, line-height 1.5
+   5. .service-card:hover — box-shadow larger, translateY -4px, transition for smoothness
+   ============================================ */

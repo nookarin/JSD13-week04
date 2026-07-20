@@ -1,0 +1,60 @@
+/* ============================================
+   DEBUG — BEM
+   Fix the naming and selector issues.
+   Do NOT modify the HTML file.
+   ============================================ */
+
+
+/* --- Bug 1 ---
+   Goal: .card--dark .card__title should be white.
+   Current: Both titles have the same color.
+   The selector .card--dark.card__title targets a single element with both
+   classes, but card--dark and card__title are on different elements.
+   Fix: add the missing descendant combinator (space).
+*/
+
+.card__title {
+  color: red;
+}
+
+.card--dark .card__title {
+  color: white;
+}
+
+
+/* --- Bug 2 ---
+   Goal: The heading and button should be styled with BEM names.
+   Current: The CSS selectors don't match the HTML classes at all
+   (HTML uses card__title and card__btn).
+   Fix: rename these generic selectors to match the BEM classes.
+*/
+
+.card__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card__btn {
+  font-size: 1rem;
+  padding: 8px 16px;
+  background: blue;
+  color: white;
+  border: none;
+}
+
+
+/* --- Bug 3 ---
+   Goal: .card--active should add a blue border.
+   Current: The border doesn't show up.
+   The selector for the modifier is missing. Add it.
+*/
+
+.card {
+  border: 2px solid #ccc;
+  padding: 16px;
+}
+
+.card--active{
+  border: 2px solid blue;
+  padding: 16px;
+}

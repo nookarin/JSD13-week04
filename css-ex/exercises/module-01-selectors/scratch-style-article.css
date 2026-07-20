@@ -1,0 +1,35 @@
+/* ============================================
+   SCRATCH — STYLE AN ARTICLE
+   Write all CSS from scratch.
+   
+   TASKS:
+   1. h1 — deep purple, centered text
+   2. Element with id="author" — italic, gray color
+   3. All paragraphs inside .content — line-height of 1.8
+   4. All span elements with class="highlight" — bold, yellow background
+   5. First letter of every paragraph — 2x font size, red
+   ============================================ */
+
+h1{
+   color: purple;
+   text-align: center;
+}
+
+#author{
+   font-style: italic;
+   color: gray;
+}
+
+p.content{
+   line-height: 1.8;
+}
+
+span.highlight{
+   font-weight: bold;
+   background-color: yellow;
+}
+
+::first-letter{
+   font-size-adjust: 1;
+   color: red;
+}

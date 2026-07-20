@@ -1,0 +1,44 @@
+/* ============================================
+   PARTIAL — BEM
+   Replace each _____ with the correct BEM selector.
+   ============================================ */
+
+
+/* --- Profile block --- */
+/* Task 1: Select the profile block itself — add border, padding, max-width */
+_____ {
+  border: 1px solid #ddd;
+  padding: 24px;
+  max-width: 300px;
+  text-align: center;
+}
+
+/* Task 2: Select the profile name element — make it bold, font-size 1.3rem */
+_____ {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 12px 0 4px;
+}
+
+/* Task 3: Select the profile bio element — gray color, small font */
+_____ {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Task 4: Select the profile FOLLOW modifier button — green background */
+_____ {
+  background: #2ea44f;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+}
+
+
+/* --- Alert block --- */
+/* Task 5: Select the alert--success modifier — green border, light green bg */
+_____ {
+  border: 2px solid #2ea44f;
+  background: #d4edda;
+}

@@ -1,0 +1,51 @@
+/* ============================================
+   DEBUG — BOX MODEL
+   Fix the box sizing issues. Do NOT modify the HTML file.
+   ============================================ */
+
+
+/* --- Bug 1 ---
+   Goal: .box-overflow should be 300px total.
+   Current: width: 300px + padding 20px + border 2px = 342px.
+   Fix: add the right property to make padding+border fit inside the 300px.
+*/
+
+.box-overflow {
+  width: 300px;
+  padding: 20px;
+  border: 2px solid #333;
+  background: #e8f4f8;
+}
+
+
+/* --- Bug 2 ---
+   Goal: Gap between .box-a and .box-b should be 70px.
+   Current: Margins are collapsing — only 40px gap.
+   Fix: add a property to .box-b to prevent margin collapse.
+*/
+
+.box-a {
+  margin-bottom: 40px;
+  background: #ffeaa7;
+  padding: 16px;
+}
+
+.box-b {
+  margin-top: 30px;
+  background: #dfe6e9;
+  padding: 16px;
+}
+
+
+/* --- Bug 3 ---
+   Goal: .bad-span should be 200px wide.
+   Current: It's an inline element so width is ignored.
+   Fix: change the display property so it respects width but stays inline flow.
+*/
+
+.bad-span {
+  width: 200px;
+  background: #74b9ff;
+  padding: 8px;
+  text-align: center;
+}

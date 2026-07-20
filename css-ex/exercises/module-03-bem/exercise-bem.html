@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debug — BEM</title>
+  <link rel="stylesheet" href="exercise-bem.css">
+</head>
+<body>
+
+  <section class="exercise">
+    <h2>Bug 1 — Class collision</h2>
+    <p>Both cards should have different title colors. Currently both titles are the same. Fix by using BEM naming.</p>
+
+    <div class="card">
+      <h3 class="card__title">Featured</h3>
+      <p class="card__text">This card has a red title.</p>
+    </div>
+
+    <div class="card card--dark">
+      <h3 class="card__title">Standard</h3>
+      <p class="card__text">This card should have a white title.</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="exercise">
+    <h2>Bug 2 — Generic class names</h2>
+    <p>The button and the card title should look different. Right now they share styles because of generic class names. Rename the classes in the CSS.</p>
+
+    <div class="card">
+      <h3 class="card__title">Card Title</h3>
+      <button class="card__btn">Click</button>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="exercise">
+    <h2>Bug 3 — Missing modifier</h2>
+    <p>When the card has the class "active", its border should be blue. It isn't. Add the correct class to the CSS.</p>
+
+    <div class="card card--active">
+      <p>This card should have a blue border.</p>
+    </div>
+    <div class="card">
+      <p>This card should have a gray border.</p>
+    </div>
+  </section>
+
+</body>
+</html>

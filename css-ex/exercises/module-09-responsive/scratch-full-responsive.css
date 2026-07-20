@@ -1,0 +1,26 @@
+/* ============================================
+   SCRATCH — FULL RESPONSIVE PAGE
+   Write all CSS from scratch.
+   
+   Use a mobile-first approach (start with mobile styles,
+   then add min-width media queries for larger screens).
+
+   MOBILE (base styles):
+   1. * — box-sizing border-box, margin 0, padding 0
+   2. body — font-family sans-serif, line-height 1.6, padding 16px
+   3. .site-header — text-align center, margin-bottom 24px
+   4. .nav — display flex, flex-direction column, gap 8px, align-items center
+   5. .nav a — text-decoration none, color #0984e3
+   6. .content-area — display flex, flex-direction column, gap 24px
+   7. .sidebar-widget — background #f4f4f4, padding 16px, text-align center
+
+   TABLET (min-width: 768px):
+   8. .nav — flex-direction row, justify-content center, gap 16px
+   9. .content-area — flex-direction row
+   10. .post — flex 2
+   11. .sidebar — flex 1
+
+   DESKTOP (min-width: 1024px):
+   12. body — max-width 1000px, margin auto
+   13. .post — font-size 1.125rem
+   ============================================ */

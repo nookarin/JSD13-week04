@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debug — Typography</title>
+  <link rel="stylesheet" href="exercise-font.css">
+</head>
+<body>
+
+  <section class="exercise">
+    <h2>Bug 1 — Font fallback missing</h2>
+    <p class="fancy">If "FunkyFont" doesn't load, there's no fallback. This text becomes the browser default. Add a fallback stack.</p>
+  </section>
+
+  <hr>
+
+  <section class="exercise">
+    <h2>Bug 2 — Wrong font-weight</h2>
+    <p class="thin">This text should look thin (weight 300), but it looks bold.</p>
+    <p class="bold">This text should be bold (weight 700), but it looks normal.</p>
+  </section>
+
+  <hr>
+
+  <section class="exercise">
+    <h2>Bug 3 — Google Font not loading</h2>
+    <p class="google-font">This text uses "Roboto" but it's not loading. The CSS is missing the @import or the link tag is missing.</p>
+    <p>Fix: The HTML file is missing the Google Fonts <code>&lt;link&gt;</code> in the head.</p>
+  </section>
+
+</body>
+</html>

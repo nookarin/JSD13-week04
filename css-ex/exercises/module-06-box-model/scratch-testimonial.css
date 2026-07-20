@@ -1,0 +1,13 @@
+/* ============================================
+   SCRATCH — TESTIMONIAL CARD
+   Write all CSS from scratch.
+   
+   TASKS:
+   1. .testimonial — max-width 400px, margin auto, padding 32px, border 1px solid #e0e0e0, border-radius 12px, box-shadow subtle
+   2. .testimonial__quote — font-style italic, font-size 1.15rem, line-height 1.7, color #333, margin-bottom 24px
+   3. .testimonial__author — display flex, align-items center, gap 12px
+   4. .testimonial__avatar — width 60px, height 60px, border-radius 50%, border 2px solid #ddd
+   5. .testimonial__info — display flex, flex-direction column
+   6. .testimonial__name — font-weight bold, font-size 1rem
+   7. .testimonial__role — font-size 0.85rem, color #888
+   ============================================ */

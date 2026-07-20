@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scratch — Media Object (BEM)</title>
+  <link rel="stylesheet" href="scratch-bem.css">
+</head>
+<body>
+
+  <div class="media">
+    <img class="media__image" src="https://placehold.co/100" alt="thumbnail">
+    <div class="media__body">
+      <h3 class="media__title">Media Object Title</h3>
+      <p class="media__text">This is a description for the media object. It should wrap nicely next to the image using flexbox or float.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="media media--featured">
+    <img class="media__image media__image--round" src="https://placehold.co/100" alt="thumbnail">
+    <div class="media__body">
+      <h3 class="media__title">Featured Media</h3>
+      <p class="media__text">This one has the --featured modifier and a --round image modifier.</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+/* ============================================
+   SCRATCH — MEDIA OBJECT (BEM)
+   Write all CSS from scratch.
+   
+   TASKS:
+   1. .media — display flex, gap 16px, padding 16px, border-bottom
+   2. .media__image — width 100px, height auto
+   3. .media__image--round — border-radius 50%
+   4. .media__body — flex 1
+   5. .media__title — font-size 1.2rem, bold, margin-bottom 4px
+   6. .media__text — color #555, line-height 1.5
+   7. .media--featured — background #f0f8ff, border-left 4px solid blue
+   ============================================ */

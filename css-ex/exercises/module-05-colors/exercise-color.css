@@ -1,0 +1,42 @@
+/* ============================================
+   DEBUG — COLORS
+   Fix the color values. Do NOT modify the HTML file.
+   ============================================ */
+
+
+/* --- Bug 1 ---
+   Goal: Background should be teal (#008080).
+   Current: Not working — the hex value is missing something.
+   Fix the value.
+*/
+
+.hex-box {
+  background: 008080;
+  color: white;
+  padding: 20px;
+}
+
+
+/* --- Bug 2 ---
+   Goal: Text color should be black at 50% opacity (rgba).
+   Current: The alpha value is outside the valid range.
+   Fix the rgba value.
+*/
+
+.semi-box {
+  color: rgba(0, 0, 0, 2);
+  font-size: 1.2rem;
+}
+
+
+/* --- Bug 3 ---
+   Goal: Text should be dark enough to read against the light background.
+   Current: The color value is too light.
+   Fix the color to a darker shade while keeping it blue.
+*/
+
+.bad-contrast {
+  background: #f0f0f0;
+  color: #b0c4de;
+  padding: 20px;
+}

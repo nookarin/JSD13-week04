@@ -1,0 +1,64 @@
+/* ============================================
+   PARTIAL — BADGE OVERLAY
+   Replace each _____ with the correct value.
+   ============================================ */
+
+
+/* Task 1 — Badge positioned in top-right corner of product card */
+.product-card {
+  _____: relative;
+  border: 1px solid #ddd;
+  padding: 16px;
+  max-width: 300px;
+}
+
+.product-card__badge {
+  _____: absolute;
+  _____: 10px;
+  _____: 10px;
+  background: #d63031;
+  color: white;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+
+/* Task 2 — Tooltip appears above the trigger on hover */
+.tooltip-trigger {
+  _____: relative;
+  display: inline-block;
+  background: #0984e3;
+  color: white;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.tooltip-trigger__tip {
+  _____: absolute;
+  _____: -40px;
+  _____: 50%;
+  transform: translateX(-50%);
+  background: #2d3436;
+  color: white;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  display: none;
+}
+
+.tooltip-trigger:hover .tooltip-trigger__tip {
+  display: block;
+}
+
+
+/* Task 3 — "Back to Top" button fixed to bottom-right of viewport */
+.back-to-top {
+  _____: fixed;
+  _____: 20px;
+  _____: 20px;
+  background: #2d3436;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+}

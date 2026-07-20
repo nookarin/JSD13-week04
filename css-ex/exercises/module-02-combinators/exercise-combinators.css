@@ -1,0 +1,44 @@
+/* ============================================
+   DEBUG — COMBINATORS & PSEUDO-CLASSES
+   Fix the CSS. Do NOT modify the HTML file.
+   ============================================ */
+
+
+/* --- Bug 1 ---
+   Goal: Only top-level li items should be bold.
+   Current: ALL li items including nested ones are bold.
+   Fix the descendant selector to use a child selector instead.
+*/
+
+.nav > li  {
+  font-weight: bold;
+}
+
+/* temp fix */
+
+.nav > li > ul > li {
+  font-weight: normal;
+}
+
+
+/* --- Bug 2 ---
+   Goal: The first paragraph AFTER each h3 should be italic.
+   Current: Something is wrong — all or none are italic.
+   Fix the selector.
+*/
+
+h3 + p {
+  font-style: italic;
+}
+
+
+/* --- Bug 3 ---
+   Goal: Hovering the button should turn its background red.
+   Current: Nothing happens on hover.
+   Fix the selector.
+*/
+
+.btn-hover:hover {
+  background: red;
+  color: white;
+}

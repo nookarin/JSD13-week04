@@ -1,0 +1,61 @@
+/* ============================================
+   PARTIAL — FLEXBOX
+   Replace each _____ with the correct property/value.
+   ============================================ */
+
+
+/* Task 1 — Navigation: logo on left, links on right */
+.nav-bar {
+  _____: flex;
+  _____: space-between;
+  _____: center;
+  background: #2d3436;
+  padding: 16px 24px;
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-bar__links {
+  _____: flex;
+  _____: 16px;
+}
+
+
+/* Task 2 — Card grid: 3 cards in a row, equal width, gap 16px */
+.card-grid {
+  _____: flex;
+  _____: 16px;
+}
+
+.card-grid__item {
+  _____: 1;
+  background: #dfe6e9;
+  padding: 32px;
+  text-align: center;
+}
+
+
+/* Task 3 — Center content both ways in a 200px tall box */
+.center-me {
+  _____: flex;
+  _____: center;
+  _____: center;
+  height: 200px;
+  border: 1px dashed #999;
+}
+
+
+/* Task 4 — Equal height columns */
+.equal-height {
+  _____: flex;
+  _____: 16px;
+}
+
+.eq-col {
+  _____: 1;
+  background: #ffeaa7;
+  padding: 16px;
+}

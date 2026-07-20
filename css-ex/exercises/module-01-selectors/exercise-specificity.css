@@ -1,0 +1,54 @@
+/* ============================================
+   DEBUG — SPECIFICITY
+   Three CSS bugs for you to fix.
+   Rules: Do NOT modify the HTML file.
+   ============================================ */
+
+
+/* --- Bug 1 ---
+   Goal: The paragraph with class "highlight" should be red.
+   Problem: It's blue right now.
+   Fix: remove the extra specificity from the first selector.
+*/
+
+.highlight {
+  color: blue;
+}
+
+.highlight {
+  color: red;
+}
+
+
+/* --- Bug 2 ---
+   Goal: The paragraph with id="special" inside .card should be green.
+   Problem: A more specific selector is overriding #special.
+   Fix: remove the extra specificity from the first selector.
+*/
+
+.card {
+  color: black;
+}
+
+#special {
+  color: green;
+}
+
+
+/* --- Bug 3 ---
+   Goal: The button text should be white on the blue background.
+   Current: Button has color: black.
+   Add ONE new rule to .btn below to make text white.
+   Do not remove the existing color rule.
+*/
+
+.btn {
+  color: black;
+  background: #1d77d1;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  
+  color: white;
+}

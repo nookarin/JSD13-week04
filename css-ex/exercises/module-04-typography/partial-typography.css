@@ -1,0 +1,45 @@
+/* ============================================
+   PARTIAL — TYPOGRAPHY
+   Replace each _____ with the correct property and/or value.
+   ============================================ */
+
+
+/* Task 1 — Article heading: serif font, bold, 2.5rem, centered */
+.article-title {
+  _____: "Merriweather", Georgia, serif;
+  _____: 700;
+  _____: 2.5rem;
+  _____: center;
+}
+
+
+/* Task 2 — Article body: font-size 1.125rem, line-height 1.8, color #333 */
+.article-body {
+  _____: 1.125rem;
+  _____: 1.8;
+  _____: #333;
+}
+
+
+/* Task 3 — Code snippet: monospace font, background #f4f4f4, padding 4px 8px */
+.code-snip {
+  _____: "Fira Code", "Courier New", monospace;
+  _____: #f4f4f4;
+  _____: 4px 8px;
+}
+
+
+/* Task 4 — Subtitle: all uppercase, letter-spacing 2px, gray */
+.subtitle {
+  _____: uppercase;
+  _____: 2px;
+  _____: #777;
+}
+
+
+/* Task 5 — Read more link: no underline, blue, bold */
+.read-more {
+  _____: none;
+  _____: blue;
+  _____: bold;
+}

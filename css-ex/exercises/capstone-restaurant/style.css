@@ -1,0 +1,42 @@
+/* ============================================
+   🏆 CAPSTONE — RESTAURANT MENU
+   Write ALL CSS from scratch.
+   
+   The HTML is complete with BEM naming.
+   Your job: style everything.
+
+   REQUIREMENTS:
+   1. CSS Reset (* { box-sizing: border-box; margin: 0; padding: 0; })
+   2. body — font-family sans-serif, background #faf8f5, color #333
+   3. .header — text-align center, padding 60px 20px 40px, background #2d3436, color white
+      .header__title — font-size 2.5rem, letter-spacing 1px
+      .header__subtitle — font-style italic, color #b2bec3, margin-top 8px
+   
+   4. .nav — display flex, justify-content center, gap 24px, padding 16px, 
+      position sticky, top 0, background white, box-shadow, z-index 10
+      .nav__link — text-decoration none, color #555, font-weight 600
+      .nav__link:hover — color #e17055
+   
+   5. .menu — max-width 900px, margin auto, padding 40px 20px
+      .menu__heading — font-size 1.8rem, margin-bottom 24px, border-bottom 2px solid #e17055, 
+      padding-bottom 8px
+      .menu__grid — display flex, flex-wrap wrap, gap 24px, justify-content center
+   
+   6. .menu-item — flex 1 1 260px, border 1px solid #e0e0e0, border-radius 8px, 
+      padding 24px, background white, position relative
+      .menu-item:hover — box-shadow 0 4px 16px rgba(0,0,0,0.1), translateY -4px, 
+      transition all 0.2s ease
+      .menu-item__name — font-size 1.2rem, margin-bottom 8px
+      .menu-item__desc — color #777, font-size 0.9rem, line-height 1.5, margin-bottom 12px
+      .menu-item__price — font-weight bold, color #e17055, font-size 1.1rem
+      .menu-item__badge — position absolute, top 8px, right 8px, background #e17055, 
+      color white, padding 4px 10px, font-size 0.75rem, border-radius 4px, font-weight bold
+      .menu-item__badge--sold — background #636e72
+   
+   7. .footer — text-align center, padding 32px, background #2d3436, color white, margin-top 40px
+      .footer__text — font-size 0.9rem, color #b2bec3
+   
+   8. RESPONSIVE:
+      At max-width: 600px, make .menu__grid flex-direction column
+      At max-width: 600px, reduce .header padding
+   ============================================ */

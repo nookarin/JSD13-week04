@@ -1,0 +1,57 @@
+/* ============================================
+   DEBUG — BREAKPOINTS
+   Fix the responsive issues. Do NOT modify the HTML file.
+   ============================================ */
+
+
+/* --- Bug 1 ---
+   Goal: 0-640px = red, 640-768px = orange, 768px+ = green
+   Current: The order is wrong — the 640px rule overrides the 768px one.
+   Fix by reordering the media queries.
+*/
+
+.responsive-text {
+  color: red;
+}
+
+@media (min-width: 768px) {
+  .responsive-text {
+    color: green;
+  }
+}
+
+@media (min-width: 640px) {
+  .responsive-text {
+    color: orange;
+  }
+}
+
+
+/* --- Bug 2 ---
+   Goal: Screens 480px+ should have font-size 1.25rem.
+   Current: Always 1rem. A media query is missing.
+   Add one media query for min-width: 480px.
+*/
+
+.mobile-text {
+  font-size: 1rem;
+}
+
+
+/* --- Bug 3 ---
+   Goal: Below 600px, columns stack vertically.
+   Current: They're always side by side.
+   Add a media query that changes the flex direction at max-width: 600px.
+*/
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.col {
+  flex: 1;
+  background: #dfe6e9;
+  padding: 24px;
+  text-align: center;
+}

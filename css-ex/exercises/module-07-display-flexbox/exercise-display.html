@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debug — Display & Flexbox</title>
+  <link rel="stylesheet" href="exercise-display.css">
+</head>
+<body>
+
+  <section class="exercise">
+    <h2>Bug 1 — Items not centered</h2>
+    <div class="flex-center">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+    </div>
+    <p>They should be centered both horizontally and vertically inside the 200px tall container.</p>
+  </section>
+
+  <hr>
+
+  <section class="exercise">
+    <h2>Bug 2 — Items not in a row</h2>
+    <div class="flex-row">
+      <span>Item 1</span>
+      <span>Item 2</span>
+      <span>Item 3</span>
+    </div>
+    <p>They should sit side by side in a row, not stacked vertically.</p>
+  </section>
+
+  <hr>
+
+  <section class="exercise">
+    <h2>Bug 3 — Link not clickable-friendly</h2>
+    <a class="block-link" href="#">Click me — this should be easy to tap</a>
+    <p>The link should have padding all around and be a block-level element so the whole area is clickable.</p>
+  </section>
+
+</body>
+</html>

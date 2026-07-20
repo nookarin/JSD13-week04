@@ -1,0 +1,37 @@
+/* ============================================
+   DEBUG — TYPOGRAPHY
+   Fix the font issues. Do NOT modify the HTML file.
+   ============================================ */
+
+
+/* --- Bug 1 ---
+   Goal: If "FunkyFont" doesn't load, fall back to a sans-serif system font.
+   Current: No fallback at all.
+   Fix the font-family value to include a fallback.
+*/
+
+.fancy {
+  font-family: "FunkyFont", ;
+}
+
+
+/* --- Bug 2 ---
+   Goal: .thin should be weight 300, .bold should be weight 700.
+   Current: The values below are wrong.
+   Fix the font-weight values.
+*/
+
+.thin {
+  font-weight: 100;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+
+/* --- Bug 3 ---
+   The HTML file is missing the Google Fonts <link> tag.
+   Open the HTML file and add the correct <link> from Google Fonts
+   to load "Roboto" at weights 400 and 700.
+*/

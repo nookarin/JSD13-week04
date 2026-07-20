@@ -1,0 +1,58 @@
+/* ============================================
+   SCRATCH — NAVIGATION MENU
+   Write all CSS from scratch.
+   
+   TASKS:
+   1. .navbar — display flex, align items center, background dark, padding
+   2. .logo — white text, bold, no underline
+   3. .nav-links — display flex, no list style, gap between items
+   4. .nav-links a — white text, remove underline, padding
+   5. .nav-links a:hover — underline or background change
+   6. .dropdown — hidden by default (display: none), positioned absolute under Services
+   7. The li that contains .dropdown — position relative
+   8. Hover over that li — .dropdown becomes visible (display: block)
+   ============================================ */
+
+.navbar{
+   display: flex;
+   align-items: center;
+   background: black;
+   padding: 12px 24px;
+}
+
+.logo{
+   color: white;
+   font-weight: bold;
+   text-decoration: none;
+}
+
+.nav-links{
+   display: flex;
+   list-style: none;
+   gap: 10px;
+}
+
+.nav-links a{
+   color: white;
+   text-decoration: none;
+   padding: 12px 24px;
+}
+
+.nav-links a:hover{
+   text-decoration: underline;
+   background: red;
+}
+
+.dropdown{
+   display: none;
+   position: absolute;
+}
+
+.dropdown li{
+   position: relative;
+}
+
+.nav-links li:hover .dropdown {
+  display: block;
+  background-color: black;
+}

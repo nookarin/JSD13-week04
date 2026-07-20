@@ -1,0 +1,28 @@
+/* ============================================
+   PARTIAL — TABLET LAYOUT
+   Complete the media query so at 768px+ the layout is 2 columns.
+   Below 768px, columns stack vertically.
+   ============================================ */
+
+.responsive-layout {
+  display: flex;
+  gap: 24px;
+}
+
+.main-col {
+  flex: 2;
+  background: #dfe6e9;
+  padding: 24px;
+}
+
+.side-col {
+  flex: 1;
+  background: #b2bec3;
+  padding: 24px;
+}
+
+
+/* --- Task ---
+   Add a media query for max-width: 767px that makes the layout stack.
+   Change .responsive-layout to flex-direction: column.
+*/

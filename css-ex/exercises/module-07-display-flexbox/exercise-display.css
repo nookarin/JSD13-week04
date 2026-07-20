@@ -1,0 +1,44 @@
+/* ============================================
+   DEBUG — DISPLAY & FLEXBOX
+   Fix the layout issues. Do NOT modify the HTML file.
+   ============================================ */
+
+
+/* --- Bug 1 ---
+   Goal: Items centered both horizontally and vertically.
+   Current: They're in a flex container but not centered.
+   Fix by adding the missing flex properties to .flex-center.
+*/
+
+.flex-center {
+  display: flex;
+  height: 200px;
+  border: 1px dashed #999;
+}
+
+
+/* --- Bug 2 ---
+   Goal: Items should be in a horizontal row.
+   Current: They're spans (inline) but still stacking wrong. 
+   The container should make them a flex row.
+   Add display: flex to .flex-row.
+*/
+
+.flex-row {
+  border: 1px dashed #999;
+  padding: 8px;
+}
+
+
+/* --- Bug 3 ---
+   Goal: The link should be block-level so the whole padded area is clickable.
+   Current: It's inline, so padding doesn't work correctly.
+   Fix the display property.
+*/
+
+.block-link {
+  background: #0984e3;
+  color: white;
+  padding: 16px 24px;
+  text-decoration: none;
+}

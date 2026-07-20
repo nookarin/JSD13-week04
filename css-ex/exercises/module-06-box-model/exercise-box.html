@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debug — Box Model</title>
+  <link rel="stylesheet" href="exercise-box.css">
+</head>
+<body>
+
+  <section class="exercise">
+    <h2>Bug 1 — Box is too wide</h2>
+    <div class="box-overflow">This box should be 300px wide total, but the padding and border make it wider. Fix without changing width.</div>
+  </section>
+
+  <hr>
+
+  <section class="exercise">
+    <h2>Bug 2 — Margin collapse</h2>
+    <div class="box-a">Box A has margin-bottom: 40px</div>
+    <div class="box-b">Box B has margin-top: 30px. The gap should be 70px, but it's only 40px. Why? Fix the CSS.</div>
+  </section>
+
+  <hr>
+
+  <section class="exercise">
+    <h2>Bug 3 — Inline element ignoring width</h2>
+    <span class="bad-span">I should be 200px wide but I'm not because I'm inline. Change my display.</span>
+  </section>
+
+</body>
+</html>
