@@ -7,8 +7,9 @@
 /* Task 1 — Card: add padding 24px on all sides, border 1px solid #ddd, border-radius 8px, box-sizing border-box */
 .card-task {
   border: 1px solid #ddd;
-  _____: 8px;
-  _____: _____;
+  border-radius: 8px;
+  padding: 24px;
+  box-sizing: border-box;
 }
 
 
@@ -19,14 +20,15 @@
   padding: 20px;
   background: #dfe6e9;
   text-align: center;
+
 }
 
 .left {
-  _____: 32px;
+  margin-right: 32px;
 }
 
 .right {
-  _____: 0;
+  margin-right: 0;
 }
 
 
@@ -35,15 +37,15 @@
   background: #0984e3;
   color: white;
   border: none;
-  _____: 12px 24px;
+  padding: 12px 24px;
   font-size: 1rem;
-  _____: 6px;
+  border-radius: 6px;
 }
 
 
 /* Task 4 — Image: 4px solid black border, 8px padding between image and border */
 .img-task {
-  _____: 4px solid black;
-  _____: 8px;
-  _____: 50%;
+  border: 4px solid black;
+  padding: 8px;
+  border-radius: 50%;
 }

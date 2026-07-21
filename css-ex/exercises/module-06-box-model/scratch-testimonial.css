@@ -11,3 +11,50 @@
    6. .testimonial__name — font-weight bold, font-size 1rem
    7. .testimonial__role — font-size 0.85rem, color #888
    ============================================ */
+
+   .testimonial {
+      max-width: 400px;
+      margin: auto;
+      padding: 32px;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      box-shadow: subtle;
+
+   }
+
+   .testimonial__quote {
+      font-style: italic;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 24px;
+   }
+
+   .testimonial__author {
+      display: flex;
+      align-item: center;
+      gap: 12px;
+   }
+
+   .testimonial__avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50;
+      border: 2px solid #ddd;
+   }
+
+   .testimonial__info {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .testimonial__name {
+      font-weight: bold;
+      font-size: 1rem; 
+   }
+      
+
+   .testimonial__role { 
+      font-size: 0.85rem;
+      color: #888; 
+   }
