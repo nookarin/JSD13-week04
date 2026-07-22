@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname)));
 
 // ── MongoDB Connection + Model Loading ───────────────────
 let User = null;
+let Comment = null;
 let dbReady = false;
 
 mongoose.set("strictQuery", false);
@@ -25,8 +26,9 @@ mongoose
   .connect(MONGO_URI)
   .then(() => {
     console.log("[DB] MongoDB connected");
-    // Load model AFTER connection succeeds
+    // Load models AFTER connection succeeds
     User = require("./models/User");
+    Comment = require("./models/Comment");
     dbReady = true;
   })
   .catch((err) => {
@@ -151,6 +153,64 @@ app.get("/api/auth/me", authMiddleware, async (req, res) => {
 // POST /api/auth/logout
 app.post("/api/auth/logout", (_req, res) => {
   res.json({ message: "Logged out successfully" });
+});
+
+// ── Comment Routes ──────────────────────────────────────
+
+// GET /api/comments?title=...&artist=...
+app.get("/api/comments", async (req, res) => {
+  try {
+    const { title, artist } = req.query;
+    if (!title || !artist) {
+      return res.status(400).json({ error: "title and artist are required" });
+    }
+    if (!dbReady || !Comment) {
+      return res.json({ comments: [] });
+    }
+    const comments = await Comment.find({
+      itemTitle: title,
+      itemArtist: artist,
+    })
+      .sort({ createdAt: -1 })
+      .limit(50)
+      .lean();
+    return res.json({ comments });
+  } catch (err) {
+    console.error("[Comments] Fetch error:", err.message);
+    return res.status(500).json({ error: "Server error" });
+  }
+});
+
+// POST /api/comments
+app.post("/api/comments", authMiddleware, async (req, res) => {
+  try {
+    const { title, artist, text } = req.body;
+    if (!title || !artist || !text) {
+      return res.status(400).json({ error: "title, artist, and text are required" });
+    }
+    if (text.length > 1000) {
+      return res.status(400).json({ error: "Comment must be at most 1000 characters" });
+    }
+    if (!dbReady || !Comment) {
+      return res.status(503).json({ error: "Database not available" });
+    }
+    const user = await User.findById(req.userId).select("username");
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+    const comment = new Comment({
+      itemTitle: title,
+      itemArtist: artist,
+      userId: req.userId,
+      username: user.username,
+      text,
+    });
+    await comment.save();
+    return res.status(201).json({ comment });
+  } catch (err) {
+    console.error("[Comments] Create error:", err.message);
+    return res.status(500).json({ error: "Server error" });
+  }
 });
 
 // ── Catch-all: serve index.html for SPA ─────────────────

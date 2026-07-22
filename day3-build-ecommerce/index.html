@@ -11,15 +11,12 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#" class="logo">Vinyl<span>Vault</span></a>
+      <a href="index.html" class="logo">Vinyl<span>Vault</span></a>
       <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">&#9776;</button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
-        <li><a href="#features">Features</a></li>
+        <li><a href="browse.html">Browse</a></li>
         <li><a href="#marketplace">Marketplace</a></li>
-        <li><a href="#collection">Collection</a></li>
-
-        <li><a href="#contact">Contact</a></li>
         <li class="auth-buttons" id="authButtons">
           <button class="btn-login" id="loginBtn">Log In</button>
           <button class="btn-nav" id="signupBtn">Sign Up</button>
@@ -46,34 +43,41 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-albums" id="heroAlbums"></div>
+    <div class="hero-slideshow" id="heroSlideshow"></div>
+    <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Your Music.<br><span>Your Collection.</span><br>Your Marketplace.</h1>
       <p>Catalog every pressing. Track your collection. Buy and sell vinyl, CDs, and cassettes with a global community of music lovers.</p>
       <div class="hero-search">
-        <div class="search-bar">
-          <input type="text" id="searchInput" placeholder="Search for Pink Floyd, Daft Punk, Miles Davis..." autocomplete="off">
-          <button id="searchBtn" class="btn btn-primary">Search</button>
-        </div>
-      </div>
-      <div class="search-status" id="searchStatus"></div>
-      <div class="search-results" id="searchResults"></div>
-      <div class="hero-stats">
-        <div class="stat">
-          <h2>19M+</h2>
-          <p>Releases</p>
-        </div>
-        <div class="stat">
-          <h2>500K+</h2>
-          <p>Collectors</p>
-        </div>
-        <div class="stat">
-          <h2>10M+</h2>
-          <p>Items Sold</p>
-        </div>
+        <form class="search-bar" id="heroSearchForm">
+          <div class="search-input-wrap">
+            <input type="text" id="searchInput" placeholder="Search for Pink Floyd, Daft Punk, Miles Davis..." autocomplete="off">
+            <div class="search-suggestions" id="heroSuggestions"></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
       </div>
     </div>
+    <a href="#marketplace" class="hero-scroll-hint" aria-label="Scroll to browse">
+      <span class="hero-scroll-text">Start Browsing</span>
+      <span class="hero-scroll-arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+      </span>
+    </a>
   </section>
+
+  <!-- STICKY SEARCH BAR (appears on scroll) -->
+  <div class="sticky-search" id="stickySearch">
+    <div class="sticky-search-inner">
+      <form class="search-bar" id="stickySearchForm">
+        <div class="search-input-wrap">
+          <input type="text" id="stickySearchInput" placeholder="Search for Pink Floyd, Daft Punk, Miles Davis..." autocomplete="off">
+          <div class="search-suggestions" id="stickySuggestions"></div>
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
 
   <!-- MARKETPLACE PREVIEW -->
   <section class="marketplace" id="marketplace">
@@ -93,60 +97,55 @@
     </div>
   </section>
 
-  <!-- FEATURES + COLLECTION -->
-  <section class="features" id="features">
+  <!-- RECOMMENDED -->
+  <section class="marketplace" id="recommended">
     <div class="container">
-      <h2 class="section-title">Why <span>VinylVault</span>?</h2>
-      <p class="section-subtitle">Everything a music collector needs, in one place.</p>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">&#127925;</div>
-          <h3>Release Database</h3>
-          <p>Browse millions of releases with detailed pressing info, tracklists, artwork, and label data — all community-verified.</p>
+      <h2 class="section-title">Recommended <span>For You</span></h2>
+      <p class="section-subtitle">Handpicked albums based on what's hot right now.</p>
+      <div class="market-grid" id="recommendedGrid">
+        <div class="market-loader">
+          <div class="spinner"></div>
+          <p>Loading releases...</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#128722;</div>
-          <h3>Marketplace</h3>
-          <p>Buy and sell vinyl, CDs, and cassettes. Filter by condition, price, format, and seller rating.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#127942;</div>
-          <h3>Collection Tracker</h3>
-          <p>Log every record you own. See your collection's estimated value, genre breakdown, and format stats at a glance.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#128148;</div>
-          <h3>Wantlist</h3>
-          <p>Track every release you're hunting for. Get notified the moment a wantlist item hits the marketplace.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#128200;</div>
-          <h3>Price History</h3>
-          <p>View historical sale prices, trend graphs, and current market value for any release.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#128101;</div>
-          <h3>Community</h3>
-          <p>Rate releases, leave reviews, join forums, and connect with collectors from around the world.</p>
-        </div>
+      </div>
+      <div class="center-btn">
+        <a href="browse.html" class="btn btn-primary">Explore More</a>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
+  <!-- GENRE BROWSER -->
+  <section class="genre-browser" id="genreBrowser">
     <div class="container">
-      <h2 class="section-title">Get In <span>Touch</span></h2>
-      <p class="section-subtitle">Have questions? We'd love to hear from you.</p>
-      <form class="contact-form">
-        <div class="form-row">
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-        </div>
-        <input type="text" placeholder="Subject" required>
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-      </form>
+      <h2 class="section-title">Browse by <span>Genre</span></h2>
+      <p class="section-subtitle">Discover top albums across your favourite genres.</p>
+      <div class="genre-buttons" id="genreButtons">
+        <button class="genre-btn active" data-genre="all">All</button>
+        <button class="genre-btn" data-genre="rock">Rock</button>
+        <button class="genre-btn" data-genre="pop">Pop</button>
+        <button class="genre-btn" data-genre="electronic">Electronic</button>
+        <button class="genre-btn" data-genre="hip-hop">Hip-Hop</button>
+        <button class="genre-btn" data-genre="jazz">Jazz</button>
+        <button class="genre-btn" data-genre="r&b">R&B</button>
+        <button class="genre-btn" data-genre="metal">Metal</button>
+        <button class="genre-btn" data-genre="classical">Classical</button>
+        <button class="genre-btn" data-genre="alternative">Alternative</button>
+        <button class="genre-btn" data-genre="country">Country</button>
+        <button class="genre-btn" data-genre="folk">Folk</button>
+        <button class="genre-btn" data-genre="blues">Blues</button>
+        <button class="genre-btn" data-genre="reggae">Reggae</button>
+        <button class="genre-btn" data-genre="punk">Punk</button>
+        <button class="genre-btn" data-genre="indie">Indie</button>
+        <button class="genre-btn" data-genre="soul">Soul</button>
+        <button class="genre-btn" data-genre="latin">Latin</button>
+        <button class="genre-btn" data-genre="k-pop">K-Pop</button>
+      </div>
+      <div class="genre-status" id="genreStatus"></div>
+      <div class="market-grid" id="genreGrid"></div>
+      <div class="genre-sentinel" id="genreSentinel"></div>
+      <div class="center-btn" id="genreBrowseMore" style="display:none;">
+        <a href="#" class="btn btn-outline" id="genreBrowseMoreBtn">Browse More</a>
+      </div>
     </div>
   </section>
 

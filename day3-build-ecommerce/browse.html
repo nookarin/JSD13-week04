@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse — VinylVault</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="browse.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Vinyl<span>Vault</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#marketplace">Marketplace</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li class="auth-buttons" id="authButtons">
+          <button class="btn-login" id="loginBtn">Log In</button>
+          <button class="btn-nav" id="signupBtn">Sign Up</button>
+        </li>
+        <li class="user-menu hidden" id="userMenu">
+          <button class="user-avatar-btn" id="userAvatarBtn">
+            <span class="user-avatar-letter" id="userAvatarLetter">U</span>
+            <span class="user-name" id="userName">User</span>
+          </button>
+          <div class="user-dropdown hidden" id="userDropdown">
+            <div class="dropdown-header">
+              <span class="dropdown-email" id="userEmail"></span>
+            </div>
+            <div class="dropdown-divider"></div>
+            <button class="dropdown-item dropdown-logout" id="logoutBtn">Log Out</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BROWSE PAGE -->
+  <main class="browse-page">
+    <div class="browse-container">
+
+      <!-- Search Bar -->
+      <div class="browse-search-bar">
+        <form id="browseSearchForm" class="browse-search-form">
+          <input type="text" id="browseSearchInput" placeholder="Search songs, artists, albums..." autocomplete="off">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+      </div>
+
+      <div class="browse-layout">
+
+        <!-- Sidebar Filters -->
+        <aside class="browse-sidebar">
+          <h3 class="sidebar-title">Filters</h3>
+
+          <!-- Type Filter -->
+          <div class="filter-group">
+            <h4>Type</h4>
+            <label class="filter-radio"><input type="radio" name="type" value="all" checked> All</label>
+            <label class="filter-radio"><input type="radio" name="type" value="song"> Songs</label>
+            <label class="filter-radio"><input type="radio" name="type" value="album"> Albums</label>
+            <label class="filter-radio"><input type="radio" name="type" value="musicArtist"> Artists</label>
+          </div>
+
+          <!-- Sort Filter -->
+          <div class="filter-group">
+            <h4>Sort By</h4>
+            <select id="sortSelect" class="filter-select">
+              <option value="relevance">Relevance</option>
+              <option value="name-asc">Name A-Z</option>
+              <option value="name-desc">Name Z-A</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="date-desc">Newest First</option>
+              <option value="date-asc">Oldest First</option>
+            </select>
+          </div>
+
+          <!-- Genre Filter -->
+          <div class="filter-group">
+            <h4>Genre</h4>
+            <select id="genreSelect" class="filter-select">
+              <option value="all">All Genres</option>
+              <option value="rock">Rock</option>
+              <option value="pop">Pop</option>
+              <option value="electronic">Electronic</option>
+              <option value="hip-hop">Hip-Hop</option>
+              <option value="jazz">Jazz</option>
+              <option value="classical">Classical</option>
+              <option value="r&b">R&B</option>
+              <option value="country">Country</option>
+              <option value="metal">Metal</option>
+              <option value="punk">Punk</option>
+              <option value="folk">Folk</option>
+              <option value="blues">Blues</option>
+              <option value="alternative">Alternative</option>
+            </select>
+          </div>
+
+          <!-- Source Filter -->
+          <div class="filter-group">
+            <h4>Source</h4>
+            <label class="filter-radio"><input type="radio" name="source" value="all" checked> All</label>
+            <label class="filter-radio"><input type="radio" name="source" value="itunes"> iTunes</label>
+            <label class="filter-radio"><input type="radio" name="source" value="musicbrainz"> MusicBrainz</label>
+            <label class="filter-radio"><input type="radio" name="source" value="local"> Local</label>
+          </div>
+
+          <!-- Price Filter -->
+          <div class="filter-group">
+            <h4>Price</h4>
+            <label class="filter-radio"><input type="radio" name="price" value="all" checked> All</label>
+            <label class="filter-radio"><input type="radio" name="price" value="has-price"> Has Price</label>
+            <label class="filter-radio"><input type="radio" name="price" value="under-10"> Under $10</label>
+            <label class="filter-radio"><input type="radio" name="price" value="under-25"> Under $25</label>
+            <label class="filter-radio"><input type="radio" name="price" value="under-50"> Under $50</label>
+            <label class="filter-radio"><input type="radio" name="price" value="over-50"> $50+</label>
+          </div>
+        </aside>
+
+        <!-- Results Area -->
+        <div class="browse-results-area">
+          <div class="browse-status" id="browseStatus"></div>
+          <div class="browse-results" id="browseResults"></div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- AUTH MODALS -->
+  <div class="modal-overlay hidden" id="modalOverlay">
+    <div class="modal hidden" id="loginModal">
+      <button class="modal-close" id="loginClose">&times;</button>
+      <h2>Welcome Back</h2>
+      <p class="modal-subtitle">Log in to your VinylVault account</p>
+      <form id="loginForm" class="auth-form">
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Your password" required>
+        </div>
+        <div class="form-error hidden" id="loginError"></div>
+        <button type="submit" class="btn btn-primary auth-submit">
+          <span class="btn-text">Log In</span>
+          <span class="btn-spinner hidden"><div class="spinner-sm"></div></span>
+        </button>
+      </form>
+      <p class="modal-switch">Don't have an account? <button id="switchToSignup">Sign Up</button></p>
+    </div>
+    <div class="modal hidden" id="signupModal">
+      <button class="modal-close" id="signupClose">&times;</button>
+      <h2>Create Account</h2>
+      <p class="modal-subtitle">Join the VinylVault community</p>
+      <form id="signupForm" class="auth-form">
+        <div class="form-group">
+          <label for="signupUsername">Username</label>
+          <input type="text" id="signupUsername" placeholder="Choose a username" minlength="3" maxlength="30" required>
+        </div>
+        <div class="form-group">
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" placeholder="Min. 6 characters" minlength="6" required>
+        </div>
+        <div class="form-group">
+          <label for="signupConfirm">Confirm Password</label>
+          <input type="password" id="signupConfirm" placeholder="Repeat your password" minlength="6" required>
+        </div>
+        <div class="form-error hidden" id="signupError"></div>
+        <button type="submit" class="btn btn-primary auth-submit">
+          <span class="btn-text">Create Account</span>
+          <span class="btn-spinner hidden"><div class="spinner-sm"></div></span>
+        </button>
+      </form>
+      <p class="modal-switch">Already have an account? <button id="switchToLogin">Log In</button></p>
+    </div>
+  </div>
+
+  <script src="music-api.js"></script>
+  <script src="browse.js"></script>
+</body>
+</html>
