@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     border: 1px solid #999;
-    width: 750px;
+    gap: 20px;
 }
 
 .content {
@@ -16,9 +16,6 @@
 }
 
 .card img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
     display: block;
 }
 
@@ -38,14 +35,42 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     color: #222;
+    margin-bottom: 18px;
 }
 
-.info-card {
-    border-color: black;
-    font-size: 64px;
+mark{
+    border-radius: 20px;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 72px;
     line-height: 0.95;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     color: #0b2239;
     margin-bottom: 18px;
+}
+
+.left-part, .middle-part, .right-side {
+  flex: 0.1;       
+}
+
+.button
+{
+    background-color: rgb(147, 203, 219);
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: 2px solid black;
+    text-align: center;
+    box-shadow: 5px 5px;
+    font-weight: bold;
+    font-size: 12;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3{
+    font-family: "Montserrat", sans-serif;
+    padding: 30px;
 }
