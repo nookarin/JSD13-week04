@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VinylVault — Music Database & Marketplace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Vinyl<span>Vault</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#marketplace">Marketplace</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" class="btn-nav">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Your Music.<br><span>Your Collection.</span><br>Your Marketplace.</h1>
+      <p>Catalog every pressing. Track your collection. Buy and sell vinyl, CDs, and cassettes with a global community of music lovers.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn btn-primary">Explore Database</a>
+        <a href="#" class="btn btn-outline">Start Selling</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <h2>19M+</h2>
+          <p>Releases</p>
+        </div>
+        <div class="stat">
+          <h2>500K+</h2>
+          <p>Collectors</p>
+        </div>
+        <div class="stat">
+          <h2>10M+</h2>
+          <p>Items Sold</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title">Why <span>VinylVault</span>?</h2>
+      <p class="section-subtitle">Everything a music collector needs, in one place.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">&#127925;</div>
+          <h3>Release Database</h3>
+          <p>Browse millions of releases with detailed pressing info, tracklists, artwork, and label data — all community-verified.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128722;</div>
+          <h3>Marketplace</h3>
+          <p>Buy and sell vinyl, CDs, and cassettes. Filter by condition, price, format, and seller rating. Secure checkout included.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#127942;</div>
+          <h3>Collection Tracker</h3>
+          <p>Log every record you own. See your collection's estimated value, genre breakdown, and format stats at a glance.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128148;</div>
+          <h3>Wantlist</h3>
+          <p>Track every release you're hunting for. Get notified the moment a wantlist item hits the marketplace.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128200;</div>
+          <h3>Price History</h3>
+          <p>View historical sale prices, trend graphs, and current market value for any release before you buy or sell.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128101;</div>
+          <h3>Community</h3>
+          <p>Rate releases, leave reviews, join forums, and connect with collectors and sellers from around the world.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKETPLACE PREVIEW -->
+  <section class="marketplace" id="marketplace">
+    <div class="container">
+      <h2 class="section-title">Trending on the <span>Marketplace</span></h2>
+      <p class="section-subtitle">See what collectors are buying and selling right now.</p>
+      <div class="market-grid">
+        <div class="market-card">
+          <div class="card-img" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);"></div>
+          <div class="card-body">
+            <span class="card-format">Vinyl, LP, Album</span>
+            <h4>Dark Side of the Moon</h4>
+            <p class="card-artist">Pink Floyd</p>
+            <div class="card-meta">
+              <span class="card-condition">NM / VG+</span>
+              <span class="card-price">$42.99</span>
+            </div>
+          </div>
+        </div>
+        <div class="market-card">
+          <div class="card-img" style="background: linear-gradient(135deg, #f59e0b, #ef4444);"></div>
+          <div class="card-body">
+            <span class="card-format">Vinyl, LP, Album</span>
+            <h4>Rumours</h4>
+            <p class="card-artist">Fleetwood Mac</p>
+            <div class="card-meta">
+              <span class="card-condition">M / M</span>
+              <span class="card-price">$68.50</span>
+            </div>
+          </div>
+        </div>
+        <div class="market-card">
+          <div class="card-img" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);"></div>
+          <div class="card-body">
+            <span class="card-format">CD, Album, Reissue</span>
+            <h4>Nevermind</h4>
+            <p class="card-artist">Nirvana</p>
+            <div class="card-meta">
+              <span class="card-condition">VG+ / VG</span>
+              <span class="card-price">$18.00</span>
+            </div>
+          </div>
+        </div>
+        <div class="market-card">
+          <div class="card-img" style="background: linear-gradient(135deg, #10b981, #84cc16);"></div>
+          <div class="card-body">
+            <span class="card-format">Cassette, Album</span>
+            <h4>Discovery</h4>
+            <p class="card-artist">Daft Punk</p>
+            <div class="card-meta">
+              <span class="card-condition">VG+ / VG+</span>
+              <span class="card-price">$35.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="center-btn">
+        <a href="#" class="btn btn-primary">Browse All Listings</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTION SECTION -->
+  <section class="collection" id="collection">
+    <div class="container">
+      <div class="collection-grid">
+        <div class="collection-text">
+          <h2 class="section-title">Track Your <span>Collection</span></h2>
+          <p>See exactly what you own, what it's worth, and what's missing. VinylVault gives you powerful stats and insights into your personal music library.</p>
+          <ul class="check-list">
+            <li>Log vinyl, CDs, cassettes, and more</li>
+            <li>Real-time estimated collection value</li>
+            <li>Genre and format breakdowns</li>
+            <li>Public or private profile settings</li>
+            <li>Share your collection with friends</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Start My Collection</a>
+        </div>
+        <div class="collection-visual">
+          <div class="visual-card">
+            <div class="visual-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="visual-body">
+              <div class="visual-stat-row">
+                <div class="visual-stat">
+                  <span class="num">247</span>
+                  <span class="label">Items</span>
+                </div>
+                <div class="visual-stat">
+                  <span class="num">$8,420</span>
+                  <span class="label">Est. Value</span>
+                </div>
+              </div>
+              <div class="visual-bar-group">
+                <div class="bar-label"><span>Vinyl</span><span>72%</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width: 72%;"></div></div>
+              </div>
+              <div class="visual-bar-group">
+                <div class="bar-label"><span>CD</span><span>18%</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width: 18%;"></div></div>
+              </div>
+              <div class="visual-bar-group">
+                <div class="bar-label"><span>Cassette</span><span>10%</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width: 10%;"></div></div>
+              </div>
+              <div class="visual-genres">
+                <span class="genre-tag">Rock</span>
+                <span class="genre-tag">Electronic</span>
+                <span class="genre-tag">Jazz</span>
+                <span class="genre-tag">Soul</span>
+                <span class="genre-tag">Punk</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <h2 class="section-title">Simple <span>Pricing</span></h2>
+      <p class="section-subtitle">Buyers and collectors use VinylVault for free. Sellers pay a small fee.</p>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Collector</h3>
+          <div class="price"><span class="amount">Free</span></div>
+          <ul>
+            <li>Browse the full database</li>
+            <li>Track your collection</li>
+            <li>Manage your wantlist</li>
+            <li>Buy from the marketplace</li>
+            <li>Rate and review releases</li>
+          </ul>
+          <a href="#" class="btn btn-outline">Get Started</a>
+        </div>
+        <div class="price-card featured">
+          <span class="badge">Popular</span>
+          <h3>Seller</h3>
+          <div class="price"><span class="amount">Free</span><span class="period"> + 8% fee</span></div>
+          <ul>
+            <li>Everything in Collector</li>
+            <li>List items for sale</li>
+            <li>Seller dashboard & analytics</li>
+            <li>Shipping label integration</li>
+            <li>Payout via Stripe</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Start Selling</a>
+        </div>
+        <div class="price-card">
+          <h3>Pro Seller</h3>
+          <div class="price"><span class="amount">$9.99</span><span class="period">/mo</span></div>
+          <ul>
+            <li>Everything in Seller</li>
+            <li>Reduced 5% transaction fee</li>
+            <li>Bulk listing tools</li>
+            <li>Advanced analytics</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#" class="btn btn-outline">Go Pro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In <span>Touch</span></h2>
+      <p class="section-subtitle">Have questions? We'd love to hear from you.</p>
+      <form class="contact-form">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <input type="text" placeholder="Subject" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#" class="logo">Vinyl<span>Vault</span></a>
+          <p>The community-driven music database and marketplace for vinyl records, CDs, and cassettes.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#">Database</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Genres</a></li>
+            <li><a href="#">Labels</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="#">Forums</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Seller Guide</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 VinylVault. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('active');
+    });
+    // Close menu on link click
+    links.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => links.classList.remove('active'));
+    });
+  </script>
+</body>
+</html>
