@@ -493,6 +493,7 @@ img {
   position: relative;
   overflow: visible;
   transition: min-height 0.4s ease, padding 0.4s ease;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .hero.hero-collapsed {
@@ -666,6 +667,9 @@ img {
   width: 100%;
   position: relative;
   z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 16px;
 }
 
 .hero h1 {
